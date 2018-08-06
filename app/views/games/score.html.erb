@@ -1,0 +1,17 @@
+
+<h2>Result</h2>
+
+
+<% if @result == 1 %>
+  <p>Congratulations! <strong><%= @word.upcase %></strong> is a valid english word!</p>
+<% elsif @result == 2 %>
+  <p>Sorry, but <strong><%= @word.upcase %></strong> can't be built out of <%= @letterkeys %>"</p>
+<% else %>
+<p>Sorry but <strong><%= @word.upcase %></strong> does not seem to be a valid English word.</p>
+<% end %>
+
+
+<h4>Your score: <%= @score %></h4>
+
+
+<%= link_to "Play Again", new_path  %>
